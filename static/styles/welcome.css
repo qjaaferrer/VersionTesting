@@ -1,0 +1,77 @@
+body{
+    background-image: url('https://images5.alphacoders.com/575/thumb-1920-575881.jpg');
+    }
+    
+    
+    
+    
+    .buttons {
+        
+        display: inline-block;
+          
+    }
+
+    #round {
+        border: 2px solid black;
+        color: rgb(255, 255, 255);
+        background-color: rgb(253,138,16);
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-family: 'Lexend Deca'; font-size: 80px;
+        font-size: 16px;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 25px;
+        padding: 20px;
+        width: 200px;
+        
+    }
+    
+    #welcomeText{
+        margin-left: auto; 
+        margin-right: auto;
+        padding: 30px;
+        text-align: center;
+        font-family: 'Lexend Deca'; font-size: 80px;
+        color: rgb(255, 255, 255);
+    }
+
+    #description{
+        text-align: center;
+        font-family: 'Lexend Deca'; font-size: 16px;
+        color: rgb(253,138,16);
+    }
+
+    #color{
+        color: rgb(255, 255, 255);
+    }
+
+    .upperTop{
+        margin: auto;
+        color: black;
+        background: rgba(202, 202, 202, 0.6);
+        width: 100%;
+        border: 2px solid black;
+        font-family: 'Lexend Deca'; font-size: 30px;
+    }
+    
+    .top{
+        margin: auto;
+        background: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        
+        border: 2px solid black;
+    }
+
+    img {
+        width: 50px;
+        height: 50px;
+        
+    }
+
+    .center{
+        margin-left: auto; 
+        margin-right: auto;
+        width: 15em;
+    }
