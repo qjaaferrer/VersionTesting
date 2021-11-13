@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block title %} IP Finder {% endblock %}
+
+{% block body %}
+
+<div class="container">
+
+    <br>
+    <br>
+    
+    <h1>IP Geolocation Finder</h1>
+
+    <br>
+    <br>
+    
+    <form action="{{url_for('ipAdd')}}" method="post">
+
+        <div class="form-group">
+
+            <input type="text" name = "search" class="form-control" placeholder="Enter IPv4/IPv6 Address">
+        </div>
+
+        <input id="round" type="submit" class="btn btn-primary" value="Search">
+        <input id="round" type="reset" class="btn btn-primary" value="Clear">
+        
+    </form>
+
+    <br>
+    <br>
+
+    <table class = "center">
+        <tr>
+        <th>IP Address</th> 
+        <td>{{data.ip}}</td>
+        </tr>
+
+        <tr>
+        <th>City Location</th> 
+        <td>{{data.city}}</td>
+        </tr>
+
+        <tr>
+        <th>IP Country</th> 
+        <td>{{data.country}}</td>
+        </tr>
+
+        <tr>
+        <th>Latitude Information</th>
+        <td>{{data.latitude}}</td>
+        </tr>
+
+        <tr>
+        <th>Longitude Information</th>
+        <td>{{data.longitude}}</td>
+        </tr>
+
+        <tr>
+        <th>Postal Code</th>
+        <td>{{data.postal}}</td>
+        </tr>
+
+        <tr>
+        <th>Time Zone Information </th>
+        <td>{{data.timezone}}</td>
+        </tr>
+    </table></br></br>
+
+    <div id="map"></div> 
+
+    <script>
+    function initMap() {
+        var long = {{data.longitude}}
+        var lat = {{data.latitude}}
+        var location = {lat: lat, lng: long};
+        var map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 10,
+            center: location
+        });
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map
+        });
+    }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAK9X_eJqbPcVKhq6GZZwrEywYDI434Cs&callback=initMap"></script>
+    
+
+    
+
+{% endblock %}
